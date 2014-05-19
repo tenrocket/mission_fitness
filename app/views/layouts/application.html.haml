@@ -1,0 +1,89 @@
+%html
+	%head
+		%title MissionFitness
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+	%body
+
+	.section_one	
+		%ul
+			.nav
+				%li
+					= link_to "SIGN UP", "#", id: "signup", class: 'link'
+				%li
+					= link_to "HOW IT WORKS", "#", id: "howitworks", class: 'link'
+				%li 
+					= link_to "ABOUT US", "#", id: "aboutus", class: 'link'
+				%br
+
+		.modal{id: "modal"}
+			= link_to "x", "#", id: "close_modal"
+			%h1 JOIN THE MISSION
+			%br
+			= form_for Nonprofit.new do |f|
+				= f.text_field :email
+				%br
+				= f.submit "Sign Up", id: "submit_button"
+
+		.header
+			%h1 MISSION FITNESS
+
+		.down_arrow
+			= link_to "", "#", id: "down_arrow"
+
+	/ .divider_line
+	/ 	%hr
+
+	.section_two{id: "section_two"}
+		%h1 HOW IT WORKS
+		.sub_one
+			= image_tag 'http://www.iconsdb.com/icons/preview/orange/running-man-xxl.png', id: "icon_1"
+			%p 
+			At Mission Fitness, we reward exercise with philanthropy.  Every time you work out in our facility, we donate $1 to a charity partner of your choice.  Our charity partners are all focused on global health, meaning your workouts make you healthy while also improving the health of others worldwide. The more you exercise, the more we give back.  
+			%br
+			%h3 TRY IT OUT - ADD A NONPROFIT
+			%br
+			= form_for Nonprofit.new do |f|
+				= f.text_field :name
+				= f.submit "ADD", id: "add_nonprofit"
+
+		.sub_two
+			= image_tag 'http://www.iconsdb.com/icons/preview/orange/banknotes-xxl.png', id: "icon_2"
+			%p 
+			1. Every day you exercise, we take $1 off your monthly fee.  
+			%br
+			2. That $1 is donated to a charity of your choice.
+			%br
+			3. Our charitable partners use the money to create sports and recreation programs, promote nutrition and healthy eating, protect the environment, and fight disease – all of which improve the health of people.
+			%br
+			%h3 YOUR NONPROFITS
+			%br
+			- @nonprofits.each do |nonprofit|
+				= link_to "#{nonprofit.name}", "#", id: "nonprofit_show", class: 'link_list'
+				.nonprofit_modal{id: 'nonprofit_modal'}
+					= nonprofit.name
+					= link_to "Remove", nonprofit, method: :delete
+					= form_for nonprofit do |n|
+						= n.text_field :name
+						= n.submit "Update", id: "update_nonprofit"
+		.charity_partners
+			= image_tag 'http://www.somalijobs.com/wp-content/uploads/2013/12/care_logo.png', class: 'logo'
+			= image_tag 'http://www.logotypes101.com/logos/209/7CACE975DC13B15AF4417CBFA6EECB59/centerdiseasecontrolprevention.png', class: 'logo'
+			= image_tag 'http://christopherseid.com/wp-content/uploads/2010/11/ymca_20100712172306_640_480.jpg', class: 'logo'
+
+	/ .divider_line
+	/ 	%hr
+
+	.section_three{id: "section_three"}
+		= image_tag 'http://madventuresdotme.files.wordpress.com/2013/04/img_7966.jpg', id: "icon_3"
+		.sub_paragraph
+			%h1 OUR MISSION
+			%p At Mission Fitness, we empower global health initiatives by motivating people of all ages to exercise for a better world. Unlike most gyms, we don't fill the room with dozens of energy-sucking machines or unflattering fluorescent lighting.  We don’t bind members in inescapable contracts or trick them into buying services they don’t need.  We also don’t hire bulky, intimidating personal trainers that look down on others for not being in shape.  Instead, we provide a genuine, intimate, and inspiring experience that makes our clients feel good about themselves as they work hard to improve themselves and the world around them.
+
+	/ .divider_line
+	/ 	%hr
+
+	.section_four
+		.footer
+			= yield

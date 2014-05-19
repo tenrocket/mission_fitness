@@ -1,0 +1,3 @@
+class NonprofitsController < HomeController
+
+end

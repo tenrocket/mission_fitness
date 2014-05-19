@@ -1,0 +1,236 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+li {
+	display: inline;
+	padding-right: 20px;
+	float: right;
+}
+
+/*hr {
+	margin: 0;
+	padding: 0;
+	color: red;
+}*/
+
+ul {
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+	font-family: Helvetica;
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff') format('woff'),
+       url('myfont.ttf') format('truetype');
+ }
+
+.nav {
+	height: 25px;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+}
+
+.link {
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	font-family: Helvetica;
+	vertical-align: middle;
+}
+
+.link:hover {
+	color: orange;
+}
+.modal {
+	height: 300px;
+	width: 600px;
+	background-color: orange;
+	color: white;
+	opacity: 0.9;
+	margin: 0 auto;
+	width: 50%;
+	display: none;
+	-moz-box-shadow: 0 0 30px 5px #999;
+	-webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+.nonprofit_modal {
+	height: 300px;
+	width: 600px;
+	background-color: orange;
+	color: white;
+	opacity: 0.9;
+	margin: 0 auto;
+	width: 50%;
+	display: none;
+	-moz-box-shadow: 0 0 30px 5px #999;
+	-webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+.charity_partners {
+	height: 125px;
+	margin-top: 515px;
+	margin-left: 480px;
+	width: 50%;
+	font-family: Helvetica;
+	font-weight: lighter;
+	color: gray;
+}
+
+.logo {
+	height: 75px;
+	width: auto;
+}
+
+.new_user {
+	margin: 0 auto;
+	width: 50%;
+}
+
+.section_one {
+	width: 100%;
+	height: 675px;
+	background-image: url(http://l0lz.com/wp-content/uploads/2014/02/barbell6.jpg);
+	background-size: cover;
+}
+
+.section_two {
+	width: 100%;
+	height: 675px;
+}
+
+.section_three {
+	width: 100%;
+	height: 500px;
+	background-color: #f2f2f2;
+}
+
+.section_four {
+	width: 100%;
+	height: 200px;
+	background-color: black;
+}
+
+.divider_line {
+	width: 100%;
+}
+
+.sub_one {
+	float: left;
+	margin-left: 100px;
+	margin-top: 50px;
+	width: 420px;
+	text-align: justify;
+	font-family: Helvetica;
+	font-weight: lighter;
+	color: gray;
+}
+
+.sub_two {
+	float: right;
+	margin-right: 120px;
+	margin-top: 50px;
+	width: 420px;
+	text-align: justify;
+	font-family: Helvetica;
+	font-weight: lighter;
+	color: gray;
+}
+
+.sub_paragraph {
+	width: 400px;
+	margin-right: 50px;
+	margin-top: 50px;
+	text-align: justify;
+	float: right;
+}
+
+#icon_1 {
+  display:block;
+  margin:auto;
+  height: 150px;
+  width: auto;
+}
+
+#icon_2 {
+  display:block;
+  margin:auto;
+  height: 150px;
+  width: auto;
+}
+
+#icon_3 {
+  height: 500px;
+  width: auto;
+}
+
+#nonprofit_email {
+	width: 295px;
+	border-left-width: 0px;
+	margin-left: 166px;
+	height: 30px;
+	font-size: 20px;
+	color: grey;
+}
+
+#submit_button {
+	margin-left: 285px;
+	margin-top: 25px;
+}
+
+#close_modal {
+	float: right;
+	color: white;
+	text-decoration: none;
+	list-style: none;
+	font-family: Helvetica;
+	margin-right: 5px;
+}
+
+#close_modal:hover {
+	color: black;
+}
+
+.link_list {
+	color: gray;
+	text-decoration: none;
+	list-style: none;
+}
+
+.link_list:hover {
+	color: orange;
+}
+
+.down_arrow {
+	margin-top: 640px;
+	width: 50%;
+	margin-left: 610px;
+}
+#down_arrow {
+	width: 0; 
+	height: 0; 
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	
+	border-top: 30px solid orange;
+}
+
+#down_arrow:hover {
+	color: orange;
+}
+
+.header {
+	margin-top: 50px;
+	float: left;
+	color: white;
+	font-size: 6em;
+	opacity: 0.8;
+}
