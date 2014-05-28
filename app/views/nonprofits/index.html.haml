@@ -1,0 +1,7 @@
+/ = form_for @nonprofit do |n|
+/ 	= n.text_field :name
+/ 	= f.submit "Update", id: "update_nonprofit"
+
+/ / = button_tag(type: "button", class: "btn btn-xs btn-info edit-survey", "survey-id" => "#{http://survey.id}") do
+/ /         = content_tag(:strong, "Edit survey")
+/ /       = render partial: "modal", locals: { survey: survey }

@@ -1,0 +1,3 @@
+object @nonprofit do
+	attributes :name, :email
+end
