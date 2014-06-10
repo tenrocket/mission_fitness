@@ -39,6 +39,7 @@ Set up database in config/database.yml file.  I am using postgresql
       pool: 5
 
 MIGRATE DATABASE
+
 	rake db:migrate
 -----------
 
